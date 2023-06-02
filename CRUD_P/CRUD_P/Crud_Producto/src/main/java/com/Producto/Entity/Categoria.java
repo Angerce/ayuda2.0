@@ -50,6 +50,7 @@ public class Categoria {
 		this.listaProducto = listaProducto;
 	}
 	
+	//
 	
 
 }

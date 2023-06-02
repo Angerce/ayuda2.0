@@ -41,12 +41,6 @@ public class Producto {
 	@JoinColumn(name="id_estado")
 	private Estado estado;
 
-	
-	
-	public void setStock(Integer stock) {
-		this.stock = stock;
-	}
-
 	public Integer getCodigo() {
 		return codigo;
 	}
@@ -87,6 +81,14 @@ public class Producto {
 		this.precio = precio;
 	}
 
+	public Integer getStock() {
+		return stock;
+	}
+
+	public void setStock(Integer stock) {
+		this.stock = stock;
+	}
+
 	public Categoria getCategoria() {
 		return categoria;
 	}
@@ -110,6 +112,7 @@ public class Producto {
 	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}
+
 	
 	
 }

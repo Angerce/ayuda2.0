@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Medicamento</title>
+<title>Productos</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
@@ -118,12 +118,12 @@
 							  </thead>
 							  <tbody>
 								<tr th:each="data:${listaProductos}">
-							       <td th:text="${data.codigo}"></td>
+							      <td th:text="${data.codigo}"></td>
 							      <td th:text="${data.nombre}"></td>
 							      <td th:text="${data.descripcion}"></td>
 							      <td th:text="${data.imagen}"></td>
 							      <td th:text="${data.precio}"></td>
-							      <td th:text="${data.stock.cantidad}"></td>
+							      <td th:text="${data.stock}"></td>
 							      <td th:text="${data.categoria.nombre}"></td>
 							      <td th:text="${data.proveedor.nombre}"></td>
 							      <td th:text="${data.estado.nombre}"></td>
@@ -261,7 +261,7 @@
 		
 	</script>
 	
-	
+	//
 	<script>
 		
 
@@ -278,10 +278,10 @@
 			$("#idDescripcion").val(response.descripcion);
 			$("#idImagen").val(response.imagen);
 			$("#idPrecio").val(response.precio);
-			$("#idStock").val(response.stock.cantidad);
-			$("#idCategoria").val(response.categoria.nombre);
-			$("#idProveedor").val(response.proveedor.nombre);
-			$("#idEstado").val(response.estado.nombre);
+			$("#idStock").val(response.stock);
+			$("#idCategoria").val(response.categoria.codigo);
+			$("#idProveedor").val(response.proveedor.codigo);
+			$("#idEstado").val(response.estado.codigo);
 		})
 		
 	})

@@ -28,6 +28,7 @@ public class ProductoController {
 	private ProductoServices serPro;
 	@Autowired
 	private ProveedorServices serProvee;
+	
 	@RequestMapping("/lista")
 	public String index(Model model) {
 		model.addAttribute("listaProductos",serPro.listarProducto());

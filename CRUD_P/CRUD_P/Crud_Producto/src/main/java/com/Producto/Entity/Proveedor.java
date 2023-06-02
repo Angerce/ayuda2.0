@@ -30,6 +30,10 @@ public class Proveedor {
 	@OneToMany(mappedBy = "proveedor")
 	@JsonIgnore
 	private List<Producto> listaProducto;
+	
+	@ManyToOne
+	@JoinColumn(name="IDDIS")
+	private Distrito distrito;
 
 	public Integer getCodigo() {
 		return codigo;
@@ -62,6 +66,15 @@ public class Proveedor {
 	public void setListaProducto(List<Producto> listaProducto) {
 		this.listaProducto = listaProducto;
 	}
+
+	public Distrito getDistrito() {
+		return distrito;
+	}
+
+	public void setDistrito(Distrito distrito) {
+		this.distrito = distrito;
+	}
+	
 
 	
 	
